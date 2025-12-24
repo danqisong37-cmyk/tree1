@@ -1,0 +1,7 @@
+{
+  "name": "Emerald & Gold: Gesture Christmas Tree",
+  "description": "A luxury 3D particle experience controlled by hand gestures. Features morphing particles that transform into a Christmas tree, a photo grid, or a nebula using MediaPipe hand tracking.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

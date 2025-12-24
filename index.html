@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emerald & Gold: Festive Magic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;900&family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    
+    <!-- MediaPipe Hands & Camera Utilities -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    
+    <style>
+      body {
+        margin: 0;
+        background-color: #000403;
+        overflow: hidden;
+        color: #ffd700;
+        font-family: 'Inter', sans-serif;
+      }
+      #bg-gradient {
+        position: fixed;
+        inset: 0;
+        /* 调暗中心，突出粒子主体 */
+        background: radial-gradient(circle at 50% 50%, #032b1e 0%, #000403 80%);
+        z-index: -1;
+        opacity: 0.5;
+        animation: pulse 12s ease-in-out infinite alternate;
+      }
+      @keyframes pulse {
+        from { opacity: 0.4; transform: scale(1); }
+        to { opacity: 0.6; transform: scale(1.05); }
+      }
+      .luxury-glow {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.3);
+      }
+      .font-cinzel { font-family: 'Cinzel', serif; }
+      canvas { display: block; }
+      .glass-card {
+        background: rgba(3, 30, 22, 0.4);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 215, 0, 0.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "three": "https://esm.sh/three@0.160.0",
+        "three/": "https://esm.sh/three@0.160.0/",
+        "three/examples/jsm/": "https://esm.sh/three@0.160.0/examples/jsm/",
+        "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="bg-gradient"></div>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
